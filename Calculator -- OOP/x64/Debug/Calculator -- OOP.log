@@ -1,0 +1,4 @@
+﻿  Calculator -- OOP.cpp
+G:\OOP\Calculator -- OOP\Calculator -- OOP\Calculator -- OOP.cpp(77,34): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+G:\OOP\Calculator -- OOP\Calculator -- OOP\Calculator -- OOP.cpp(80,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Calculator -- OOP.vcxproj -> G:\OOP\Calculator -- OOP\x64\Debug\Calculator -- OOP.exe
