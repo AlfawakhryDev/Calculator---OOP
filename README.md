@@ -1,59 +1,64 @@
-# C++ Person Class
+# C++ Calculator
 
-This C++ code defines a `Person` class that represents an individual with attributes like ID, first name, last name, email, and phone number. It provides methods for interacting with these attributes, including sending emails and SMS messages.
+This C++ program demonstrates a basic calculator implementation with support for various arithmetic operations and error handling using custom exception classes. The calculator can perform addition, subtraction, division, multiplication, square root, exponentiation, modulus, and clearing the current result. It also maintains an operation history.
 
-## Introduction
+## Table of Contents
 
-The `Person` class is designed for managing individual person-related data within a C++ program. It encapsulates common attributes and operations associated with a person's information.
+- [Features](#features)
+- [Usage](#usage)
+- [Custom Exception Classes](#custom-exception-classes)
+- [Operation Types](#operation-types)
+- [Build and Run](#build-and-run)
+- [License](#license)
 
-## Getting Started
+## Features
 
-To use the `Person` class in your C++ program, follow these steps:
+- Basic arithmetic operations: addition, subtraction, division, multiplication, and modulus.
+- Advanced operations: square root and exponentiation.
+- Error handling for division by zero and taking the square root of a negative number.
+- History tracking of performed operations.
+- Clearing the current result.
 
-1. **Copy the `Person` Class Definition:** Include the `Person` class definition in your code.
+## Usage
 
-2. **Create `Person` Objects:** Instantiate `Person` objects by providing values for the ID, first name, last name, email, and phone number attributes.
+1. Initialize the `Calculator` class.
+2. Use the `performOperation` method to execute various operations.
+3. Access the current result with `getCurrentNumber`.
+4. Retrieve the operation history with `getOperationHistory`.
 
-3. **Interact with `Person` Objects:** Use the provided methods to interact with `Person` objects, including sending emails, SMS messages, or modifying attributes.
+## Custom Exception Classes
 
-4. **Compile and Run:** Finally, compile and run your C++ program.
+### CalculatorError
 
-## Class Structure
+This is the base class for custom exceptions and extends `std::runtime_error`. It is used for general calculator errors.
 
-The `Person` class has the following attributes:
+### DivisionByZeroError
 
-- `int id` (read-only)
-- `string firstName`
-- `string lastName`
-- `string email`
-- `string phone`
+This exception is thrown when attempting to divide by zero. It is a subclass of `CalculatorError`.
 
-## Methods
+## Operation Types
 
-The `Person` class provides the following methods:
+The program uses an `enum class OperationType` to represent different calculator operations:
 
-- `int getId()`
-- `string getFirstName()`
-- `void setFirstName(string fName)`
-- `string getLastName()`
-- `void setLastName(string lName)`
-- `string getEmail()`
-- `void setEmail(string eMail)`
-- `string getPhone()`
-- `void setPhone(string phoneNumber)`
-- `void sendEmail(string subject, string body)`
-- `void sendSms(string message)`
-- `void print()`
+- `ADD`: Addition
+- `SUBTRACT`: Subtraction
+- `CLEAR`: Clearing the result
+- `DIVIDE`: Division
+- `MULTIPLY`: Multiplication
+- `PRINT_RESULT`: Printing the current result
+- `SQUARE_ROOT`: Calculating the square root
+- `EXPONENTIATION`: Raising to a power
+- `MODULUS`: Calculating the modulus
 
-## Example
+## Build and Run
 
-Here's an example of how to create a `Person` object and use its methods:
+You can build and run the calculator program using a C++ compiler. Here are the steps:
 
-```cpp
-int main() {
-    Person person1(1, "Abdelrahman", "Alfawakhry", "Abdelrahman.Alfawakhry@X.com", "1234567890");
-    person1.print();
-    person1.sendEmail("Hello", "How are you?");
-    person1.sendSms("How are you");
-    return 0;
-}
+1. Clone or download the repository.
+2. Open a terminal and navigate to the project directory.
+3. Compile the program using a C++ compiler (e.g., g++):
+4. Run the compiled executable
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
