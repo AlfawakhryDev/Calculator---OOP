@@ -51,7 +51,7 @@ Here's an example of how to create a `Person` object and use its methods:
 
 ```cpp
 int main() {
-    Person person1(1, "John", "Doe", "johndoe@example.com", "1234567890");
+    Person person1(1, "Abdelrahman", "Alfawakhry", "Abdelrahman.Alfawakhry@X.com", "1234567890");
     person1.print();
     person1.sendEmail("Hello", "How are you?");
     person1.sendSms("How are you");
